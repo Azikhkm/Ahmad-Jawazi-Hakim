@@ -1,0 +1,66 @@
+def KonversiSuhu(suhu):
+   level = int(suhu[:-1])
+   inputan = suhu[-1]
+
+   if inputan.upper() == "C":
+     result1 = float((9 * level) / 5 + 32)
+     result2 = float(level + 273.15)
+     result3 = float(4/5 * level)
+     typeX = "Celcius"
+     type1 = "Fahrenheit"
+     type2 = "Kelvin"
+     type3 = "Reamur"
+     print(level,typeX,"=","{:.1f}".format(result1),type1)
+     print(level,typeX,"=","{:.1f}".format(result2),type2)
+     print(level,typeX,"=","{:.1f}".format(result3),type3)
+                
+   elif inputan.upper() == "F":
+     result1 = float((level - 32) * 5 / 9)
+     result2 = float(((level - 32) * 5 / 9) + 273.15)
+     result3 = float(4/9 * (level - 32))
+     typeX = "Fahrenheit"
+     type1 = "Celcius"
+     type2 = "Kelvin"
+     type3 = "Reamur"
+     print(level,typeX,"=","{:.1f}".format(result1),type1)
+     print(level,typeX,"=","{:.1f}".format(result2),type2)
+     print(level,typeX,"=","{:.1f}".format(result3),type3)
+
+   elif inputan.upper() == "K":
+     result1 = float(level - 273.15)
+     result2 = float(((level - 273.15) * 9 / 5)+32)
+     result3 = float(4/5 * (level - 273))
+     typeX = "Kelvin"
+     type1 = "Celcius"
+     type2 = "Fahrenheit"
+     type3 = "Reamur"
+     print(level,typeX,"=","{:.1f}".format(result1),type1)
+     print(level,typeX,"=","{:.1f}".format(result2),type2)
+     print(level,typeX,"=","{:.1f}".format(result3),type3)
+     
+   elif inputan.upper() == "R":
+     result1 = float((5/4) * level)
+     result2 = float((9/4 * level) + 32)
+     result3 = float((5/4 * level) + 273)
+     typeX = "Reamur"
+     type1 = "Celcius"
+     type2 = "Fahrenheit"
+     type3 = "Kelvin"
+     print(level,typeX,"=","{:.1f}".format(result1),type1)
+     print(level,typeX,"=","{:.1f}".format(result2),type2)
+     print(level,typeX,"=","{:.1f}".format(result3),type3)
+     
+   else:
+      print("Inputan tidak sesuai!! Perhatikan Penulisan Input")
+
+
+i=0
+print("PROGRAM KONVERSI SUHU")
+print("=Ahmad Jawazi Hakim=")
+print("====210441100144====")
+print("==Sistem Informasi==")
+print("NB : Penulisan suhu harus diikuti C/F/K/R")
+
+while i==0:
+   temp = input("\nMasukkan suhu: ")
+   KonversiSuhu(temp)
